@@ -39,7 +39,16 @@ body {
   animation: slideIn 0.5s ease-in-out;
   transition: background 0.5s ease, color 0.5s ease;
 }
+/* Remove number input arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
+input[type="number"] {
+    -moz-appearance: textfield;
+}
 @keyframes slideIn {
   from {
     transform: translateY(-50px);
