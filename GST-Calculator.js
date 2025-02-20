@@ -106,10 +106,5 @@ const display = document.getElementById('display');
       }
     });
 
-    display.addEventListener('mousemove', function(event) {
-      const displayRect = display.getBoundingClientRect();
-      const relativeX = event.clientX - displayRect.left;
-      cursorPosition = Math.min(Math.max(Math.floor(relativeX / (displayRect.width / display.value.length)), 0), display.value.length);
-    });
-
+   
     updateHistory();
